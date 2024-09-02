@@ -1,0 +1,11 @@
+SELECT
+    p.ProductName AS Product,
+    c.CategoryName AS Category
+FROM
+    Products p
+OUTER APPLY (
+    SELECT TOP 1 c.CategoryName
+    FROM ProductCategories pc
+    INNER JOIN Categories c ON pc.CategoryID = c.CategoryID
+    WHERE pc.ProductID = p.ProductID
+) c;
