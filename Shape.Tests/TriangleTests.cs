@@ -1,9 +1,16 @@
 using ShapeAreaCalcLib;
+using ShapeAreaCalcLib.Extensions;
 
 namespace Tests;
 
+/// <summary>
+/// Класс, содержащий тесты для проверки функциональности класса Triangle.
+/// </summary>
 public class TriangleTests
 {
+	/// <summary>
+	/// Тестирует метод CalculateArea класса Triangle.
+	/// </summary>
 	[Test]
 	public void CalculateAreaTest()
 	{
@@ -14,6 +21,10 @@ public class TriangleTests
 		Assert.That(area, Is.EqualTo(6));
 	}
 
+	
+	/// <summary>
+	/// Тестирует метод IsRightAngled класса Triangle.
+	/// </summary>
 	[Test]
 	public void IsRightAngledTest()
 	{
